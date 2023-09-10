@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.circle1,
+.circle2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #72bf44;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  animation: bounceEffect 2s infinite ease-in-out;
+}
+
+.circle2 {
+  animation-delay: -1s
+}
+
+@keyframes bounceEffect {
+
+  0%,
+  to {
+    transform: scale(0);
+    -webkit-transform: scale(0)
+  }
+
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1)
+  }
+}
